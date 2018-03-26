@@ -20,7 +20,7 @@ public interface Facade {
 
 	      try {
 	          message = new MimeMessage(session);
-	          message.setFrom(new InternetAddress("antonio01.visciglia@gmail.com"));
+	          message.setFrom(new InternetAddress("YOUR_EMAIL"));
 
 	          // chiamata al Set to
 	          readSender.setTo(message, send);
