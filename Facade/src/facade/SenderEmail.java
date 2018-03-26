@@ -14,7 +14,7 @@ import com.sun.mail.smtp.SMTPTransport;
 public class SenderEmail {
 	public void sendEmail(MimeMessage m, Session s) {
         try {
-        	File f = new File("resource/boh.txt");
+        	File f = new File("FILE_PROPERTIES_PASS");
         	Scanner sc;
         	String string = " ";
 			try {
@@ -26,7 +26,7 @@ public class SenderEmail {
 			}
 
         	SMTPTransport t = (SMTPTransport)s.getTransport("smtps");
-			t.connect("smtp.gmail.com", "antonio01.visciglia@gmail.com", string);
+			t.connect("smtp.gmail.com", "YOUR_EMAIL", string);
 			t.sendMessage(m, m.getAllRecipients());      
 			t.close();
 			JOptionPane.showMessageDialog(null, "Email inviata con successo.");
